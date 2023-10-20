@@ -8,6 +8,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    @ManyToOne
+    private Address address;
 
     public Long getId() {
         return id;
@@ -32,8 +34,5 @@ public class User {
     public void setAddress(Address address) {
         this.address = address;
     }
-
-    @ManyToOne
-    private Address address;
 
 }
